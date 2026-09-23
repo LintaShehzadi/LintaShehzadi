@@ -3,7 +3,7 @@ name: Generate Readme Aura Layout
 on:
   push:
     branches:
-      - main     # This tells the robot to run whenever you save to your main branch
+      - main
 
 jobs:
   build:
@@ -16,11 +16,3 @@ jobs:
         uses: collectioneur/readme-aura@main
         with:
           github_token: ${{ secrets.README_AURA_TOKEN }}
-
-      - name: Commit and Push the New README
-        run: |
-          git config --global user.name "github-actions[bot]"
-          git config --global user.email "github-actions[bot]@://github.com"
-          git add README.md
-          git commit -m "chore: updated profile design via aura" || echo "No changes to commit"
-          git push
