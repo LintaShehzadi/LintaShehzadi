@@ -1,6 +1,63 @@
 # Welcome to my GitHub Profile! ✨
 
 ```aura
+# Welcome to my Profile! ✨
+
+```aura
+<div style={{
+  display: 'flex',
+  justifyContent: 'center',
+  alignItems: 'center',
+  background: '#0d1117',
+  padding: '30px',
+  width: '600px'
+}}>
+
+  {/* 🎆 BORDER CONTAINER: This creates the moving glow around your banner */}
+  <div style={{
+    display: 'flex',
+    padding: '6px', /* This is the thickness of your moving border */
+    borderRadius: '16px', /* Nice rounded corners */
+    background: 'linear-gradient(90deg, #ff007f, #7f00ff, #00f0ff, #ff007f)',
+    backgroundSize: '200% 200%',
+    animation: 'moveBannerBorder 4s linear infinite', /* Moving color effect */
+    boxShadow: '0 8px 24px rgba(0, 240, 255, 0.3)'
+  }}>
+
+    {/* 📸 YOUR REPOSITORY BANNER IMAGE */}
+    <img 
+      src="https://githubusercontent.com" 
+      width={550}  /* Banner width */
+      height={200} /* Banner height */
+      style={{ 
+        borderRadius: '12px', /* Fits perfectly inside the border */
+        border: '4px solid #0d1117', /* Clean dark line separating pic and colors */
+        objectFit: 'cover' /* Stops the image from looking squished */
+      }} 
+    />
+
+  </div>
+
+  {/* ⚙️ CSS ANIMATION: Slides the colors smoothly from side to side */}
+  <style>{`
+    @keyframes moveBannerBorder {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+  `}</style>
+
+</div>
+```
+
+### What to do next:
+1. Save and commit this file inside your **`readme.source.md`** file.
+2. Go look at your **Actions** tab.
+3. Wait for the yellow circle 🟡 to flip into a green checkmark ✅.
+
+<FollowUp>
+Once it finishes, head over to your main profile page! Are the colors **moving around your image** correctly now, or did you hit any spacing issues?
+
 <div style={{
   display: 'flex',
   flexDirection: 'column',
